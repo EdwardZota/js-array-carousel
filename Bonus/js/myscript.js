@@ -8,7 +8,12 @@ const gameArray = [
 
 const imageList = document.querySelector('.image-list');
 
+const rightImageList = document.querySelector('.right-image-list');
+
+
 let imageSlideContent = "";
+
+let imageSlideContentRight = "";
 
 for(let i = 0; i < gameArray.length; i++){
     const newImageWrap =`<div class="image-wrapper">
@@ -16,9 +21,18 @@ for(let i = 0; i < gameArray.length; i++){
                         </div>`;
 
     imageSlideContent += newImageWrap;
+
+    const newImageWrapRight =`<div class="right-image">
+                                <img class="image" src="${gameArray[i]}">
+                            </div>`;
+                    
+    imageSlideContentRight += newImageWrapRight;
+
 }
 
 imageList.innerHTML = imageSlideContent;
+
+rightImageList.innerHTML = imageSlideContentRight;
 
 const imageWrapDom = document.getElementsByClassName('image-wrapper');
 

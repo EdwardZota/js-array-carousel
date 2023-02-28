@@ -16,10 +16,22 @@
     margin: 25vh 0;
     height: 50vh;
     position: relative;
+    display: flex;
+    min-width: 700px;
 }
 
 .image-list{
     height: 100%;
+    width: 77%;
+}
+
+.right-image-list{
+    width: 25%;
+}
+
+.right-image{
+    height: 20%;
+    display: block;
 }
 
 .image-wrapper{
@@ -33,22 +45,24 @@
     height: 100%;
 }
 
+
+
 .image-wrapper.block{
     display: block;
 }
 
 .nav{
     position: absolute;
-    left: 50%;
+    right: 10%;
     transform: translateX(-50%);
     background-color: lightgray;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 15px;
 
 }
 

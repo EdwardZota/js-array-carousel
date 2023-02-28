@@ -50,46 +50,38 @@ const nextDom = document.querySelector('#next');
 const prevDom = document.querySelector('#prev');
 
 nextDom.addEventListener('click',
-    function(){
+    function(){ 
+        
+        imageWrapDom[currentImage].classList.remove('block');
+        imageRightDom[currentImage].classList.remove('brightness-border');
+   
         if(currentImage < imageWrapDom.length - 1 ){
-
-            imageWrapDom[currentImage].classList.remove('block');
-            imageRightDom[currentImage].classList.remove('brightness-border');
-            currentImage++;
-            imageWrapDom[currentImage].classList.add('block');
-            imageRightDom[currentImage].classList.add('brightness-border');
+        currentImage++;
         
         }else if(currentImage == imageWrapDom.length - 1 ){
-        
-            imageWrapDom[currentImage].classList.remove('block');
-            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage = 0;
-            imageWrapDom[currentImage].classList.add('block');
-            imageRightDom[currentImage].classList.add('brightness-border');
-        
         }
         
+        imageWrapDom[currentImage].classList.add('block');
+        imageRightDom[currentImage].classList.add('brightness-border');
     }
 )
 
 prevDom.addEventListener('click',
     function(){
-        if(currentImage > 0 ){
 
-            imageWrapDom[currentImage].classList.remove('block');
-            imageRightDom[currentImage].classList.remove('brightness-border');
+        imageWrapDom[currentImage].classList.remove('block');
+        imageRightDom[currentImage].classList.remove('brightness-border');
+
+
+        if(currentImage > 0 ){
             currentImage--;
-            imageWrapDom[currentImage].classList.add('block');
-            imageRightDom[currentImage].classList.add('brightness-border');
 
         }else if(currentImage == 0){
-        
-            imageWrapDom[currentImage].classList.remove('block');
-            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage = imageWrapDom.length - 1 ;
-            imageWrapDom[currentImage].classList.add('block');
-            imageRightDom[currentImage].classList.add('brightness-border');
-        
         }
+
+        imageWrapDom[currentImage].classList.add('block');
+        imageRightDom[currentImage].classList.add('brightness-border');
     }
 )

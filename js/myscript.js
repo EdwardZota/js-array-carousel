@@ -25,3 +25,32 @@ const imageWrapDom = document.getElementsByClassName('image-wrapper');
 let currentImage = 0;
 
 imageWrapDom[currentImage].classList.add('block');
+
+
+
+const nextDom = document.querySelector('#next');
+const prevDom = document.querySelector('#prev');
+
+nextDom.addEventListener('click',
+    function(){
+        if(currentImage < imageWrapDom.length - 1 ){
+
+            imageWrapDom[currentImage].classList.remove('block');
+            currentImage++;
+            imageWrapDom[currentImage].classList.add('block');
+
+        }
+    }
+)
+
+prevDom.addEventListener('click',
+    function(){
+        if(currentImage > 0 ){
+
+            imageWrapDom[currentImage].classList.remove('block');
+            currentImage--;
+            imageWrapDom[currentImage].classList.add('block');
+
+        }
+    }
+)

@@ -32,6 +32,12 @@
 .right-image{
     height: 20%;
     display: block;
+    filter: brightness(0.3);
+}
+
+.right-image.brightness-border{
+    filter: brightness(1.2);
+    border: 3px solid cyan;
 }
 
 .image-wrapper{

@@ -36,9 +36,13 @@ rightImageList.innerHTML = imageSlideContentRight;
 
 const imageWrapDom = document.getElementsByClassName('image-wrapper');
 
+const imageRightDom = document.getElementsByClassName('right-image');
+
 let currentImage = 0;
 
 imageWrapDom[currentImage].classList.add('block');
+
+imageRightDom[currentImage].classList.add('brightness-border')
 
 
 
@@ -50,14 +54,18 @@ nextDom.addEventListener('click',
         if(currentImage < imageWrapDom.length - 1 ){
 
             imageWrapDom[currentImage].classList.remove('block');
+            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage++;
             imageWrapDom[currentImage].classList.add('block');
+            imageRightDom[currentImage].classList.add('brightness-border');
         
         }else if(currentImage == imageWrapDom.length - 1 ){
         
             imageWrapDom[currentImage].classList.remove('block');
+            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage = 0;
             imageWrapDom[currentImage].classList.add('block');
+            imageRightDom[currentImage].classList.add('brightness-border');
         
         }
         
@@ -69,14 +77,18 @@ prevDom.addEventListener('click',
         if(currentImage > 0 ){
 
             imageWrapDom[currentImage].classList.remove('block');
+            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage--;
             imageWrapDom[currentImage].classList.add('block');
+            imageRightDom[currentImage].classList.add('brightness-border');
 
         }else if(currentImage == 0){
         
             imageWrapDom[currentImage].classList.remove('block');
+            imageRightDom[currentImage].classList.remove('brightness-border');
             currentImage = imageWrapDom.length - 1 ;
             imageWrapDom[currentImage].classList.add('block');
+            imageRightDom[currentImage].classList.add('brightness-border');
         
         }
     }

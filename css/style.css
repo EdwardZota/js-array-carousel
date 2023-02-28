@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 .container{
     width: 60%;
     margin: auto;
@@ -22,12 +24,17 @@
 
 .image-wrapper{
     height: 100%;
+    display: none;
 }
 
 .image{
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.image-wrapper.block{
+    display: block;
 }
 
 .nav{
